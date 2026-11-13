@@ -6,7 +6,7 @@ checks for one with `POST /app/info` only when there is no JS update.
 
 ## Android: in-app install
 
-Ported from OTAStore's `ApkInstaller`, like `ota-client` 1.5.0. The package ships
+Ported from OTAStore's `ApkInstaller`, like `react-ota-client` 1.5.0. The package ships
 one Expo module, `ExpoOtaInstaller` (`android/src/main/java/expo/modules/otaclient/`):
 
 - `downloadAndInstall({ url, fileName, headers, checksum })`: `HttpURLConnection`
@@ -18,7 +18,7 @@ one Expo module, `ExpoOtaInstaller` (`android/src/main/java/expo/modules/otaclie
   (`canRequestPackageInstalls`, `ACTION_MANAGE_UNKNOWN_APP_SOURCES`).
 - `cancel()`; one download at a time (`E_OTA_APK_BUSY`).
 
-Error codes are stable strings shared with `ota-client` (`OTA_APK_ERRORS` in
+Error codes are stable strings shared with `react-ota-client` (`OTA_APK_ERRORS` in
 `src/installer.ts`): `E_OTA_INSTALL_PERMISSION`, `E_OTA_APK_HTTP`,
 `E_OTA_NOT_APK`, `E_OTA_APK_CHECKSUM`, `E_OTA_APK_CANCELLED`,
 `E_OTA_APK_DOWNLOAD`, `E_OTA_APK_INSTALL`. On `E_OTA_INSTALL_PERMISSION` the

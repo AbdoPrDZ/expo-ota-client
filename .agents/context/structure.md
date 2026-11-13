@@ -41,5 +41,5 @@ detailed:  + decisions.md, deeper domain files (state machines, error tables)
   where the build differs from it. Historical; the code wins.
 - `E:\OTA\OTACenter\.agents\context\backend\EXPO-DEMO.md`: server side of Expo
   updates and demo releases.
-- `E:\OTA\react-ota-client`: the bare React Native client (`ota-client`), the
+- `E:\OTA\react-ota-client`: the bare React Native client (`react-ota-client`), the
   sibling package this one mirrors where it can.

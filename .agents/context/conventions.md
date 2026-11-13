@@ -15,7 +15,7 @@
 
 ## Keep in sync
 
-- **With `ota-client`** (`E:\OTA\react-ota-client`): same OTACenter device API,
+- **With `react-ota-client`** (`E:\OTA\react-ota-client`): same OTACenter device API,
   same event names, same APK error codes (`OTA_APK_ERRORS`, `E_OTA_*`), same
   overlay behaviour and copy keys where they overlap. A fix to the APK installer
   in one usually belongs in the other (it was ported from OTAStore's

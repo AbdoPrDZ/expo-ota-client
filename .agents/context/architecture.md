@@ -7,7 +7,7 @@ asset caching, crash rollback and code signing come from Expo. This package adds
 what Expo lacks for OTACenter: forced updates and changelog UI, demo releases,
 device linking, new native builds (APKs), activity reporting and a release CLI.
 
-It is the Expo sibling of `ota-client` (`E:\OTA\react-ota-client`), which has its
+It is the Expo sibling of `react-ota-client` (`E:\OTA\react-ota-client`), which has its
 own Kotlin engine for bare React Native. The two must never be installed in the
 same app.
 
