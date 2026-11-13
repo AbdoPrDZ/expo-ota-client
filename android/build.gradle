@@ -1,0 +1,20 @@
+plugins {
+  id 'com.android.library'
+  id 'expo-module-gradle-plugin'
+}
+
+group = 'expo.modules.otaclient'
+version = '0.1.0'
+
+android {
+  namespace "expo.modules.otaclient"
+  defaultConfig {
+    versionCode 1
+    versionName "0.1.0"
+  }
+}
+
+dependencies {
+  // FileProvider, to hand the downloaded APK to the package installer.
+  implementation "androidx.core:core-ktx:1.13.1"
+}

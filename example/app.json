@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "OTA Example",
+    "slug": "expo-ota-client-example",
+    "version": "1.1.0",
+    "runtimeVersion": "1.1.0",
+    "plugins": [
+      [
+        "expo-ota-client",
+        {
+          "serverUrl": "http://172.16.40.112",
+          "apiKey": "example-api-key",
+          "allowInsecure": true
+        }
+      ]
+    ],
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.otaclient"
+    },
+    "android": {
+      "package": "com.example.otaclient",
+      "versionCode": 2,
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "expo-ota-client",
+  "version": "0.1.0",
+  "description": "Over-the-air updates for Expo apps from an OTACenter server: expo-updates config plugin, update UI, forced updates, demo releases, in-app APK installs, telemetry and a release CLI.",
+  "keywords": [
+    "expo",
+    "expo-updates",
+    "react-native",
+    "ota",
+    "updates",
+    "otacenter"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "bin": {
+    "expo-ota-client": "dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run typecheck && npm test",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "yazl": "^3.3.1"
+  },
+  "peerDependencies": {
+    "expo": ">=52.0.0",
+    "expo-updates": ">=0.27.0",
+    "react": ">=18.0.0",
+    "react-native": ">=0.76.0"
+  },
+  "peerDependenciesMeta": {
+    "expo-device": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "esbuild": "^0.25.0",
+    "expo": "^54.0.0",
+    "expo-device": "~8.0.0",
+    "expo-updates": "~29.0.0",
+    "react": "19.1.0",
+    "react-native": "0.81.4",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">= 18"
+  }
+}

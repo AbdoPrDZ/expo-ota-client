@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Lets the app hand a downloaded APK (new app version) to the package installer.
+         Remove it with the plugin option `inAppNativeUpdates: false` if the app ships on Google Play. -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application>
+        <!-- Serves APKs downloaded by ExpoOtaInstaller to the system package installer. -->
+        <provider
+            android:name="expo.modules.otaclient.ExpoOtaApkFileProvider"
+            android:authorities="${applicationId}.expootaclient.apkprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/expo_ota_client_apk_paths" />
+        </provider>
+    </application>
+
+</manifest>

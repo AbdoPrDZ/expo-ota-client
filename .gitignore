@@ -1,0 +1,13 @@
+node_modules/
+dist/
+
+# Android / Gradle output (the module is compiled by the example app)
+android/build/
+android/.gradle/
+android/.cxx/
+android/local.properties
+.gradle/
+*.iml
+release/
+keys/
+*.log
