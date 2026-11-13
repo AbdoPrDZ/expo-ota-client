@@ -48,7 +48,18 @@ The admin token for the CLI comes from `npx expo-ota-client login` or
 
 ## Releasing the package
 
-Not yet published to npm. Before a release: update `CHANGELOG.md`, bump
-`package.json` `version`, run `npm test`, `npm run typecheck`, `npm pack
---dry-run`, and build the example against `dist` (`OTA_USE_DIST=1 npx expo
-export`).
+Published on npm (`expo-ota-client`). Releases run from a developer machine,
+not CI (GitHub Actions is unavailable on this account):
+
+1. Bump `package.json` `version`, add and date the `CHANGELOG.md` entry
+   (`## [x.y.z] - YYYY-MM-DD`), build the example against `dist`
+   (`OTA_USE_DIST=1 npx expo export`), commit and push `main`.
+2. `npm run release -- --dry-run`, then `npm run release`
+   (`scripts/release.js`): checks a clean, pushed `main` and the dated entry,
+   `npm publish` (its `prepublishOnly` runs typecheck + tests), pushes tag
+   `v<version>`, and creates the GitHub release with the CHANGELOG notes.
+   Each step skips if already done. Pre-release versions go to the `next`
+   dist-tag.
+
+Needs `npm login` (or a token in `~/.npmrc`) and `gh auth login`. A new package
+name is staged by npm (`0.0.0-stage` placeholder) until approved.
